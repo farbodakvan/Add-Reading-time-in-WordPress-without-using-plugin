@@ -3,7 +3,7 @@ function reading_time() {
     $content = get_post_field( 'post_content', $post->ID );
     $word_count = explode(" ",$content);
 	$all_word = count($word_count);
-    $readingtime = ceil($all_word / 200);
+    $readingtime = ceil($all_word / 300);
     if ($readingtime == 1) {
       $timer = " دقیقه";
     } else {
