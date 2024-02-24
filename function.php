@@ -6,10 +6,18 @@ function reading_time() {
 	$all_word = count($word_count);
     $readingtime = ceil($all_word / 300);
     if ($readingtime == 1) {
-      $timer = " دقیقه";
+        if (is_rtl()) {
+            $timer = "دقیقه";
+        } else {
+            $timer = "min";
+        }
     } else {
-      $timer = " دقیقه";
+        if (is_rtl()) {
+            $timer = "دقیقه";
+        } else {
+            $timer = "min";
+        }
     }
-    $totalreadingtime = $readingtime . $timer;
+    $totalreadingtime = $readingtime . ' ' . $timer;
     return $totalreadingtime;
 }
